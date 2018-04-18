@@ -1,0 +1,17 @@
+{
+  "name": "CurrentRate",
+  "version": "1.0.0",
+  "description": "This library created for getting current Rate from NBT.",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mukhammad Yakubov, Munis Turaev",
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.0",
+    "request": "^2.85.0",
+    "xml2js": "^0.4.19"
+  }
+}
