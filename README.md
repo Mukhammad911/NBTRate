@@ -1,7 +1,6 @@
 # NBTRate
-# "author": "Mukhammad Yakubov, Munis Turaev"
-# "email":"Muhammad.Yakubov91@gmail.com"
-
+ "author": "Mukhammad Yakubov, Munis Turaev"
+ "email":"Muhammad.Yakubov91@gmail.com"
 This project gives possible to get current rate of currency from NBT Tajikistan.
 http://nbt.tj
 
@@ -12,8 +11,9 @@ http://nbt.tj
 
 4. URL below:
 
-/rate      - To get all of currencies
-/rate/{usd}  - To get only one rate of currencies also you can change your symbol.
+/rate      - To get all of currencies;
+
+/rate/{usd}  - To get only one rate of currencies also you can change your symbol;
 
  
 
