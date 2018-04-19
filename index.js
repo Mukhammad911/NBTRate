@@ -1,6 +1,7 @@
 const http = require('http');
 const request = require('request');
 const parseString = require('xml2js').parseString;
+const moment = require('moment');
 
 class Rate {
   constructor() {
@@ -46,10 +47,14 @@ class Rate {
       'THB'
     );
   }
+  
+  getCurrentDate() {
+    return moment().format('YYYY-MM-DD');
+  }
 
   getRateFromNBT() {
     var promise = new Promise(function (resolve, reject) {
-      request('http://nbt.tj/ru/kurs/export_xml.php?date=2018-04-16&export=xmlout', function (error, response, body) {
+      request(`http://nbt.tj/ru/kurs/export_xml.php?date=${this.getCurrentDate()}&export=xmlout`, function (error, response, body) {
         parseString(body, function (err, result) {
           this.remoteData = result.ValCurs.Valute;
         }.bind(this));
@@ -82,13 +87,13 @@ class Currencies extends Rate {
       }.bind(this));
   }
 
+
   getRand(url) {
     let i = 0;
     while (this.rates[i]) {
 
       if (url == `/rate/${this.rates[i].toLowerCase()}`) {
         this._getEndSymbol = url;
-        console.log('true');
         return this.rates[i].toLowerCase();
       }
       i++;

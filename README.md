@@ -1,7 +1,7 @@
 # NBTRate
  "author": "Mukhammad Yakubov, Munis Turaev"
  "email":"Muhammad.Yakubov91@gmail.com"
-This project gives possible to get current rate of currency from NBT Tajikistan.
+This project gives possible to get current {Current Date} rate of currency from NBT Tajikistan.
 http://nbt.tj
 
 1. After download you can run web server by NodeJS: node index.js
